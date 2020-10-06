@@ -1,0 +1,22 @@
+.all img{
+    position: relative;
+}
+.text{
+    position: absolute;
+    top: 50;
+    bottom: 0;
+    color: white;
+    width: 18.5vw;
+    padding: 8%;
+    background: rgb(134, 225, 255);
+    margin: auto;
+}
+.homeContent:nth-child(3n+1) .text{
+    background: rgb(246, 57, 57);
+}
+.homeContent:nth-child(3n+3) .text{
+    background: rgb(46, 46, 236);
+}
+.homeContent:nth-child(4n+1) .text{
+    background: rgb(238, 163, 24);
+}
