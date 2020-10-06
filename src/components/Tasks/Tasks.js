@@ -5,7 +5,7 @@ const Tasks = ({task,handleEvent}) => {
     const {user,date,_id} = task;
     const handleDeleted=(id) =>{
         handleEvent(id);
-        fetch(`https://safe-meadow-40975.herokuapp.com/task/${id}`,{
+        fetch(`http://safe-meadow-40975.herokuapp.com/task/${id}`,{
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'

@@ -10,7 +10,7 @@ const Event = () => {
         setEvent(events);
     }
     useEffect(() => {
-        fetch(`https://safe-meadow-40975.herokuapp.com/event?email=`+loggedInUser.email,{
+        fetch(`http://safe-meadow-40975.herokuapp.com/event?email=`+loggedInUser.email,{
             method: 'GET',
             headers: { 
                 'Content-Type': 'application/json'
