@@ -6,7 +6,7 @@ const Event = () => {
     const [loggedInUser,] = useContext(UserContext);
     const [event,setEvent] = useContext(EventContext)
     useEffect(() => {
-        fetch(`http://localhost:5000/event?email=`+loggedInUser.email,{
+        fetch(`https://safe-meadow-40975.herokuapp.com/event?email=`+loggedInUser.email,{
             method: 'GET',
             headers: { 
                 'Content-Type': 'application/json'

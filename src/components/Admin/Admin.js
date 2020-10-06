@@ -7,7 +7,7 @@ import './Admin.css';
 const Admin = () => {
     const [user,setUser] = useState([]);
     useEffect( () => {
-        fetch('http://localhost:5000/admin',{
+        fetch('https://safe-meadow-40975.herokuapp.com/admin',{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

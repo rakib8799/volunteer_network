@@ -17,7 +17,7 @@ const RegisterVolunteers = () => {
     const [selectedDate, setSelectedDate] = useState({date: ''});
     const handleSubmit = () =>{
         const newBooking = {...loggedInUser,...selectedDate,event};
-        fetch(`http://localhost:5000/content`, {
+        fetch(`https://safe-meadow-40975.herokuapp.com/content`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newBooking)
