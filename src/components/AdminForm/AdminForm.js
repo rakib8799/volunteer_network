@@ -15,7 +15,7 @@ const AdminForm = () => {
     }
 
     const handleAddEvent = (e) =>{
-        fetch('http://localhost:5000/adminForm',{
+        fetch('https://safe-meadow-40975.herokuapp.com/adminForm',{
             method: 'POST',
             headers:{
                 'Content-Type' : 'application/json'
