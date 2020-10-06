@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
-import { EventContext } from '../../App';
+import React from 'react';
 import './Tasks.css';
 
-const Tasks = ({task}) => {
+const Tasks = ({task,handleEvent}) => {
     const {user,date,_id} = task;
-    const [,setEvent] = useContext(EventContext);
     const handleDeleted=(id) =>{
+        handleEvent(id);
         fetch(`https://safe-meadow-40975.herokuapp.com/task/${id}`,{
             method: 'DELETE',
             headers: {
@@ -13,7 +12,7 @@ const Tasks = ({task}) => {
             }
         })
         .then(res=>res.json())
-        .then(data=>setEvent(data))
+        .then(data=>console.log(data))
     }
     return (
         <div className="col-md-6 mt-5">
